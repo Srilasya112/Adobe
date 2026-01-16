@@ -1,14 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>BeautyHub - Premium Cosmetics</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-   
+
+    <!-- ✅ Data Layer + GTM (replace GTM-XXXXXXX with your container ID) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+    </script>
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-XXXXXXX');
+    </script>
+    <!-- End GTM -->
+
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 </head>
 <body>
+    <!-- ✅ GTM noscript -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End GTM noscript -->
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">BeautyHub <i class="fas fa-palette"></i></div>
@@ -33,7 +55,7 @@
     <section id="home" class="hero">
         <div class="banner">
             <h1>Discover Premium Cosmetics</h1>
-            <p>Serums, Moisturizers, Makeup & More for Radiant Skin</p>
+            <p>Serums, Moisturizers, Makeup &amp; More for Radiant Skin</p>
             <a href="#collections" class="shop-btn">Shop Now</a>
         </div>
     </section>
@@ -54,42 +76,42 @@
     </div>
 
     <!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="contact-container">
-        <h2>Get In Touch</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h3>Any Queries?</h3>
-                        <p>Mail to: <a href="mailto:support@beautyhub.com">support@beautyhub.com</a></p>
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Any Queries?</h3>
+                            <p>Mail to: <a href="mailto:support@beautyhub.com">support@beautyhub.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>Chennai, Tamil Nadu<br>India - 600001</p>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h3>Phone</h3>
-                        <p>+91 98765 43210</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h3>Address</h3>
-                        <p>Chennai, Tamil Nadu<br>India - 600001</p>
-                    </div>
-                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
             </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Checkout Modal -->
     <div id="form-modal" class="modal">
