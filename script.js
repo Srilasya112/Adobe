@@ -6,6 +6,35 @@ function pushDL(evt) {
   catch (e) { console.warn('dataLayer push failed', e, evt); }
 }
 
+/*************** DATA LAYER LOGGER with TITLE ***************/
+
+
+(function() {
+  const _push = window.dataLayer.push;
+
+  window.dataLayer.push = function() {
+    const payload = arguments[0];
+
+    // Create title
+    const title = payload.event
+      ? `🔥 DATA LAYER EVENT: ${payload.event.toUpperCase()}`
+      : "🔥 DATA LAYER PUSH";
+
+    // Formatting for visibility
+    console.log(
+      `%c${title}`,
+      "background:#ff69b4; color:white; padding:6px 10px; font-size:14px; font-weight:bold; border-radius:4px;"
+    );
+
+    // Print the actual payload nicely
+    console.log(JSON.parse(JSON.stringify(payload))); // Deep copy to avoid "hidden"
+
+    // Actual push to dataLayer
+    return _push.apply(window.dataLayer, arguments);
+  };
+})();
+
+
 // Change currency here (INR or USD)
 const BH_CURRENCY = 'INR';
 const BH_BRAND = 'BeautyHub';
